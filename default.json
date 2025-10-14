@@ -21,6 +21,11 @@
         "minor",
         "patch"
       ]
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "approvePullRequests": false,
+      "automerge": false
     }
   ],
   "npmrc": "registry=https://registry.npmjs.org\n@m91michel:registry=https://npm.pkg.github.com"
