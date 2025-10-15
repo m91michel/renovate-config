@@ -10,6 +10,7 @@
   },
   "packageRules": [
     {
+      "matchManagers": ["npm"],
       "groupName": "all non-major dependencies",
       "groupSlug": "all-minor-patch",
       "excludePackagePatterns": ["@trigger.dev/*", "supabase", "openai"],
@@ -25,7 +26,9 @@
     {
       "matchManagers": ["github-actions"],
       "approvePullRequests": false,
-      "automerge": false
+      "matchUpdateTypes": [
+        "*"
+      ]
     }
   ],
   "npmrc": "registry=https://registry.npmjs.org\n@m91michel:registry=https://npm.pkg.github.com"
