@@ -30,6 +30,5 @@
         "*"
       ]
     }
-  ],
-  "npmrc": "registry=https://registry.npmjs.org\n@m91michel:registry=https://npm.pkg.github.com"
+  ]
 }
