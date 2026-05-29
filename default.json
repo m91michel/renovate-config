@@ -14,7 +14,7 @@
       "groupName": "all non-major dependencies",
       "groupSlug": "all-minor-patch",
       "excludePackagePatterns": ["@trigger.dev/*", "supabase", "openai"],
-      "excludePackageNames": ["react", "react-dom", "pnpm"],
+      "excludePackageNames": ["react", "react-dom", "pnpm", "node", "nodejs/node"],
       "matchPackagePatterns": [
         "*"
       ],
@@ -27,6 +27,18 @@
       "description": "pnpm bumps need coordinated manual updates (all packageManager fields, Docker, Semaphore); keep out of grouped minor/patch PRs.",
       "matchPackageNames": ["pnpm"],
       "groupName": "pnpm"
+    },
+    {
+      "description": "Node version bumps need coordinated updates (.nvmrc, Docker NODE_VERSION, engines, CI); keep out of grouped minor/patch PRs.",
+      "matchDepNames": ["node"],
+      "matchPackageNames": [
+        "node",
+        "nodejs/node",
+        "/(?:^|/)node$/",
+        "!calico/node",
+        "!kindest/node"
+      ],
+      "groupName": "node"
     },
     {
       "matchManagers": ["github-actions"],
